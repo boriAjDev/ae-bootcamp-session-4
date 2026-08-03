@@ -16,6 +16,7 @@ body {
 }
 
 header {
+  position: relative;
   text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
@@ -23,6 +24,36 @@ header {
   color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.auth-controls {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.14);
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+
+#auth-status {
+  font-size: 13px;
+}
+
+#auth-button {
+  border: 1px solid #fff;
+  border-radius: 999px;
+  background: #fff;
+  color: #003d7a;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#auth-button:hover {
+  background: #e3f2fd;
 }
 
 .header-content {
@@ -159,6 +190,69 @@ section h3 {
   font-weight: bold;
 }
 
+.approval-card {
+  border: 1px solid #d8e7fb;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #f8fbff;
+}
+
+.approval-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.approve-btn,
+.reject-btn,
+.secondary-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.approve-btn {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.reject-btn {
+  background: #b71c1c;
+  color: #fff;
+}
+
+.secondary-btn {
+  background: #d9e6f8;
+  color: #003d7a;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
 .delete-btn:hover {
   background: linear-gradient(135deg, #d32f2f, #b71c1c);
   transform: scale(1.05);
@@ -287,6 +381,12 @@ footer {
 
 /* Responsive design improvements */
 @media (max-width: 768px) {
+  .auth-controls {
+    position: static;
+    margin: 0 auto 10px;
+    width: fit-content;
+  }
+
   .header-content {
     flex-direction: column;
     gap: 10px;

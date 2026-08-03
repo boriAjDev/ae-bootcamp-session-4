@@ -8,6 +8,10 @@
   </head>
   <body>
     <header>
+      <div class="auth-controls">
+        <span id="auth-status">Not signed in</span>
+        <button id="auth-button" type="button">Practice Lead Login</button>
+      </div>
       <div class="header-content">
         <img src="./.images/byte-teacher.png" alt="Byte mascot" class="mascot" />
         <div class="header-text">
@@ -27,7 +31,7 @@
       </section>
 
       <section id="register-container">
-        <h3>Register Your Expertise</h3>
+        <h3 id="register-title">Request Capability Registration</h3>
         <form id="register-form">
           <div class="form-group">
             <label for="email">Consultant Email:</label>
@@ -40,11 +44,38 @@
               <!-- Capability options will be loaded here -->
             </select>
           </div>
-          <button type="submit">Register Expertise</button>
+          <button id="register-submit" type="submit">Submit Request</button>
         </form>
         <div id="message" class="hidden"></div>
       </section>
+
+      <section id="approvals-container" class="hidden">
+        <h3>Pending Approval Requests</h3>
+        <div id="approvals-list">
+          <p>No pending requests.</p>
+        </div>
+      </section>
     </main>
+
+    <div id="login-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="login-title">
+      <div class="modal-content">
+        <h3 id="login-title">Practice Lead Sign In</h3>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required />
+          </div>
+          <div class="modal-actions">
+            <button id="login-submit" type="submit">Sign In</button>
+            <button id="login-cancel" type="button" class="secondary-btn">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <footer>
       <div class="footer-content">
