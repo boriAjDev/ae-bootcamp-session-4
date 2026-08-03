@@ -1,0 +1,15 @@
+{
+  "practice_leads": [
+    {
+      "username": "pat.lead",
+      "password_hash": "f6947aa605274baf0052202c08aaafe1d136a990969758812656f3c53079d8a1",
+      "salt": "4c0e06021d595e47a1cdfcccc0fa8886",
+      "role": "practice_lead",
+      "practice_areas": ["Technology", "Strategy", "Operations"],
+      "approval_workflow": {
+        "requires_approval": true,
+        "auto_approve": false
+      }
+    }
+  ]
+}
